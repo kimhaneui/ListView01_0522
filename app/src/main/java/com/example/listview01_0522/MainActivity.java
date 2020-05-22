@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Toast;
 
 import com.example.listview01_0522.adapters.StudentAdapter;
 import com.example.listview01_0522.databinding.ActivityMainBinding;
@@ -30,6 +33,16 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        binding.studentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                학생 한명을 누르면 그사람의 이름을 토스트로 출력
+
+//                학생목록(clickedStudent)에서 눌려진 값(position)을 toast로 불러내자
+                Student clickedStudent  = ourClassStudentList.get(position);
+                Toast.makeText(mContext,clickedStudent.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 

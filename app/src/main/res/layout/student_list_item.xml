@@ -11,7 +11,7 @@
         android:padding="10dp">
         <TextView
             android:id="@+id/nameTxt"
-            android:layout_width="wrap_content"
+            android:layout_width="60dp"
             android:layout_height="wrap_content"
             android:textSize="18sp"
             android:textColor="#000000"
@@ -21,8 +21,9 @@
             android:id="@+id/addressTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:textSize="16sp"
-            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
             android:textColor="#000000"
             android:text="시 구"/>
     </LinearLayout>

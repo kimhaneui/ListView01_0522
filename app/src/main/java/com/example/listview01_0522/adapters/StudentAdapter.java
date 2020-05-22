@@ -33,6 +33,7 @@ public class StudentAdapter extends ArrayAdapter<Student> {
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View row = convertView;
+
         if (row ==null){
             row = inf.inflate(R.layout.student_list_item,null);
         }
