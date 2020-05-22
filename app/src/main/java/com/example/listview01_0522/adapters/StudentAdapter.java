@@ -1,10 +1,12 @@
 package com.example.listview01_0522.adapters;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,6 +36,15 @@ public class StudentAdapter extends ArrayAdapter<Student> {
         if (row ==null){
             row = inf.inflate(R.layout.student_list_item,null);
         }
+        TextView nameTxt = row.findViewById(R.id.nameTxt);
+        TextView addressTxt = row.findViewById(R.id.addressTxt);
+
+        Log.d("getView실행",position+"번 줄");
+
+        Student stdData = mList.get(position);
+
+        nameTxt.setText(stdData.getName());
+        addressTxt.setText(stdData.getAddress());
         return  row;
     }
 

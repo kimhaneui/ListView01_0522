@@ -10,11 +10,21 @@
         android:orientation="vertical"
         android:padding="10dp">
         <TextView
+            android:id="@+id/nameTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:text="이름"/>
+
+        <TextView
+            android:id="@+id/addressTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="16sp"
+            android:layout_marginTop="10dp"
             android:textColor="#000000"
-            android:text="김하늬 (서울시 성북구)"/>
+            android:text="시 구"/>
     </LinearLayout>
 
 </LinearLayout>
