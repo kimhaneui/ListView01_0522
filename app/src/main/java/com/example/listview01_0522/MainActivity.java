@@ -5,6 +5,7 @@ import androidx.databinding.DataBindingUtil;
 
 import android.os.Bundle;
 
+import com.example.listview01_0522.adapters.StudentAdapter;
 import com.example.listview01_0522.databinding.ActivityMainBinding;
 import com.example.listview01_0522.datas.Student;
 
@@ -17,6 +18,7 @@ public class MainActivity extends BaseActivity {
     ActivityMainBinding binding;
 
     List<Student> ourClassStudentList = new ArrayList<>();
+    StudentAdapter mStudentAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +37,9 @@ public class MainActivity extends BaseActivity {
     public void setValues() {
 
        addStudents();
+
+       mStudentAdapter = new StudentAdapter(mContext,R.layout.student_list_item,ourClassStudentList);
+       binding.studentListView.setAdapter(mStudentAdapter);
 
     }
     void addStudents() {
